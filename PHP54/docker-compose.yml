@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  php:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: php54
+    restart: always
+    ports:
+      - 54:80
+    volumes:
+      - ./html:/var/www/html
+      # - ./config:/usr/local/etc/php 
+volumes:
+  html: {}
+  # config: {}
