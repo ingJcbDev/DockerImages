@@ -209,6 +209,3 @@ RUN docker-php-ext-install pdo_mysql
 ```
 docker-compose up -d --build
 ```
-
-
-
