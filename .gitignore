@@ -4,3 +4,9 @@ PHP72/html/
 PHP54/config/
 PHP54/html/
 
+LARAVEL_MYSQL/database
+LARAVEL_MYSQL/example-prod
+
+LARAVEL_POSTGRESQL/apiRestful
+LARAVEL_POSTGRESQL/config
+LARAVEL_POSTGRESQL/postgres-data
