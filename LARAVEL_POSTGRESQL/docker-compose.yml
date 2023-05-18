@@ -10,7 +10,7 @@ services:
       - DATABASE_HOST=127.0.0.1
       - POSTGRES_USER=root
       - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=db_example
+      - POSTGRES_DB=dataBase
     volumes:
       - ./postgres-data:/var/lib/postgresql/data
     networks:
@@ -24,11 +24,13 @@ services:
       - PGADMIN_DEFAULT_PASSWORD=admin
     ports:
       - "5050:80"
+    # volumes:
+    #   - ./pgadmin-data:/var/lib/pgadmin       
     networks:
       laravel_prod_net:
         ipv4_address: 173.16.100.12      
     depends_on:
-      - postgres-db
+      - postgres-db     
 
   laravel-prod:
     build:
@@ -54,6 +56,7 @@ volumes:
   apiRestful:
   postgres-data:
   config:
+  pgadmin:
 
 networks:
   laravel_prod_net:
