@@ -68,3 +68,6 @@ networks:
       driver: default
       config:
         - subnet: 173.16.100.0/24
+
+# Ejecutar la consola del servidor
+# docker exec -it NAME_ID /bin/bash
