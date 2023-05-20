@@ -2,6 +2,7 @@ version: "3.8"
 
 services:
   postgres-db:
+    container_name: postgres_DB
     image: postgres
     restart: always
     ports:
@@ -18,6 +19,7 @@ services:
         ipv4_address: 173.16.100.11
 
   pgadmin:
+    container_name: admin_postgres
     image: dpage/pgadmin4
     environment:
       - PGADMIN_DEFAULT_EMAIL=admin@admin.com
@@ -33,6 +35,7 @@ services:
       - postgres-db     
 
   laravel-prod:
+    container_name: Server_Laravel
     build:
       context: ./
       dockerfile: Dockerfile
