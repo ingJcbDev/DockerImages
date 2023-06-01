@@ -13,6 +13,13 @@ RUN chmod 777 -R -c /usr/local/etc/php
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN curl -sl https://deb.nodesource.com/setup_8.x | bash -- \
-    && apt-get install -y nodejs \
-    && apt-get autoremove -y
+# Sin npm
+# RUN curl -sl https://deb.nodesource.com/setup_8.x | bash -- \
+#     && apt-get install -y nodejs \
+#     && apt-get autoremove -y
+
+# Instalar Node.js y npm
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash -
+RUN apt-get install -y nodejs
+
+RUN apt-get autoremove -y
