@@ -93,10 +93,10 @@ networks:
 # chown -R www-data:www-data /var/www/bootstrap/cache
 # chmod -R 775 /var/www/bootstrap/cache
 
-# chmod -R 775 /var/www/storage/oauth-private.key
-# chmod 600 /var/www/storage/oauth-private.key
-# chown www-data:www-data /var/www/storage/oauth-private.key
-
 # Crear una key para ejecutar la app en laravel
 # php artisan key:generate
 # php artisan passport:keys
+
+# chmod -R 775 /var/www/storage/oauth-private.key
+# chmod 600 /var/www/storage/oauth-private.key
+# chown www-data:www-data /var/www/storage/oauth-private.key
