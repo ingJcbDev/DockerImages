@@ -1,0 +1,25 @@
+version: "3.8"
+
+services:
+  drupal:
+    image: drupal
+    restart: always
+    ports:
+      - 8088:80
+    volumes:
+      - drupal-modules:/var/www/html/modules
+      - drupal-profiles:/var/www/html/profiles
+      - drupal-themes:/var/www/html/themes
+      - drupal-sites:/var/www/html/sites
+    environment:
+      - DRUPAL_DATABASE_HOST=192.168.0.70
+      - DRUPAL_DATABASE_PORT=5432
+      - DRUPAL_DATABASE_NAME=drupal
+      - DRUPAL_DATABASE_USER=admin
+      - DRUPAL_DATABASE_PASSWORD=?$11$P0s*3FxC
+
+volumes:
+  drupal-modules:
+  drupal-profiles:
+  drupal-themes:
+  drupal-sites:
